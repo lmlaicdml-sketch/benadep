@@ -411,8 +411,10 @@ html {
 }
 
 
-
 #content2 {
+    position: relative;
+}
+#content2 .top {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
     align-items: start;
@@ -423,13 +425,16 @@ html {
     margin: 20px auto 0;
     background-color: #FFF9F8;
     border-radius: 20px;
+    font-weight: 400;
+}
+#content2 .top > .cha1 {
     transition: transform 0.3s ease;
 }
 
 #content2 > div {
     min-width: 0;
 }
-#content2 > div:hover {
+#content2 .top > div:hover {
     transform: scale(1.05);
 }
 
@@ -456,6 +461,23 @@ html {
     font-size: 14px;
     line-height: 1.4;
     text-align: center;
+}
+#content2 .bottom {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 16px;
+    margin: 0 auto ;
+    border-radius: 28px;
+    width: 6%;
+    height: 6px;
+    background-color: #FFE8E8;
+}
+#content2 .bottom .cha1 {
+    background-color: #E9486A;
+    border-radius: 28px;
+    width: 50%;
+    height: 100%;
 }
 
 @media (max-width: 900px) {
@@ -521,11 +543,13 @@ html {
     display: flex;
     align-items: center;
     gap: 10px;
+    color: #e9486a;
 }
 #content3 .cu > .top .cha2 p {
     background-color: #e9486a;
     padding: 4px;
     border-radius: 4px;
+    color: #fff;
 }
 
 #content3 .cu > .top .cha3 {
@@ -535,6 +559,7 @@ html {
     color: #e9486a;
     font-weight: 600;
     cursor: pointer;
+    text-decoration:underline;
 }
 
 
@@ -638,8 +663,22 @@ html {
     margin-top: 8px;
     color: #888888;
     font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 4px;
 }
 
+#content3 .ong1 .cha6 {
+    border-radius: 28px;
+    width: 100%;
+    height: 6px;
+    background-color: #FFE8E8;
+}
+#content3 .ong1 .cha6 .con1 {
+    background-color: #E9486A;
+    border-radius: 28px;
+    width: 50%;
+    height: 100%;
+}
 
 
 
@@ -697,7 +736,6 @@ html {
     min-width: 0;
     box-sizing: border-box;
     border-radius: 12px;
-    padding: 7px;
     position: relative;
 }
 
@@ -707,6 +745,7 @@ html {
     align-items: stretch;
 }
 
+
 #content4 .center .left {
     display: flex;
     align-items: center;
@@ -715,7 +754,16 @@ html {
     border-radius: 8px;
     background: #fff;
 }
+#content4 .center .left .cha1  {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #content4 .center .left svg {
+    width: 80%;
+    height: 75%;
     margin: 4px;
     padding: 8px 16px;
     background-color: #FFE8E8;
@@ -728,7 +776,6 @@ html {
     border: 1px solid #fff9f8;
     border-radius: 8px;
     background: #fff;
-    padding-right: 32px;
 }
 
 #content4 .center .right > .top {
@@ -757,6 +804,10 @@ html {
     font-size: 12px;
     cursor: pointer;
     padding: 8px 0 0 8px;
+}
+#content4 .center .right > .bottom .con2 {
+    margin: 4px;
+    font-weight: 400;
 }
 #content4 .center .right .con1 {
     color: #1685ff;
@@ -953,7 +1004,7 @@ html {
     margin-bottom: 18px;
 }
 
-#content6 .tien > .bottom p {
+#content6 .tien > .bottom div {
     display: inline-block;
     font-size: 16px;
     font-weight: 600;
@@ -963,12 +1014,14 @@ html {
     border-radius: 20px;
     transition: transform 0.3s ease;
 }
-#content6 .tien > .bottom p:hover {
+#content6 .tien > .bottom div:hover {
     color: #fff;
     background-color: #E9486A;
     transform: scale(1.05);
 }
-
+#content6 .tien > .bottom div svg path:hover {
+    fill: #fff;
+}
 #content6 .tien > .bottom svg {
     margin-left: 12px;
 }
@@ -1027,7 +1080,8 @@ html {
     gap: 14px;
 }
 
-#footer > .top > .ong1 > .cha3 .con1 {
+#footer > .top > .ong1 > .cha3 .con1,
+#footer > .top > .ong1 > .cha3 .con2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1148,7 +1202,7 @@ html {
 #footer > .support {
     position: fixed;
     right: 22px;
-    bottom: 72px;
+    bottom: 22px;
     z-index: 10;
     width: 360px;
     max-width: calc(100% - 32px);
@@ -1202,12 +1256,18 @@ html {
     right: 12px;
     cursor: pointer;
 }
+#footer > .support > .cha2 .con1:hover {
+    cursor: pointer;
+}
 
 #footer > .support > .cha2 .con2 {
     display: flex;
     align-items: center;
     gap: 10px;
     padding-right: 20px;
+}
+#footer > .support > .cha1:hover {
+    cursor: pointer;
 }
 
 #footer > .support > .cha2 .con2 img {
@@ -1293,4 +1353,9 @@ html {
     #footer > .bottom p {
         font-size: 10px;
     }
+}
+
+
+#footer .support .cha2.haha {
+    display: none;
 }
