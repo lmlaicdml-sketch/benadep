@@ -550,6 +550,7 @@ html {
     padding: 4px;
     border-radius: 4px;
     color: #fff;
+    font-variant-numeric: tabular-nums;
 }
 
 #content3 .cu > .top .cha3 {
@@ -1359,3 +1360,8 @@ html {
 #footer .support .cha2.haha {
     display: none;
 }
+
+
+
+
+

@@ -1,3 +1,0 @@
-Day la file em tao de luyen tap Git.
-Em dang hoc cach quan ly phien ban.
-Em dang hoc cach su dung git diff.
